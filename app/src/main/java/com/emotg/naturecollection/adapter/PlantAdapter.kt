@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.emotg.naturecollection.R
 
-class PlantAdapter : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
+class PlantAdapter(private val layoutId: Int) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
 
     /* Boîte pour ranger tout les composants à contrôler */
 
