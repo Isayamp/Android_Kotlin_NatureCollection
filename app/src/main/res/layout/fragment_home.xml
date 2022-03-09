@@ -21,6 +21,7 @@
         android:layout_height="200dp"
         android:src="@drawable/trending3" />-->
 
+    <!-- RecycleView des plantes horizontal -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/horizontal_recycler_view"
         android:layout_width="match_parent"
@@ -37,5 +38,15 @@
         android:layout_marginLeft="@dimen/default_margin"
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/home_page_last_plant_section" />
+
+    <!-- RecycleView vertical des derinères plantes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vertical_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
 
 </LinearLayout>
