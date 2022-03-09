@@ -22,6 +22,10 @@ class HomeFragment : Fragment() {
         val horizontalRecyclerView = view.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
         horizontalRecyclerView.adapter = PlantAdapter(R.layout.item_horizontal_plant)
 
+        // Récuperer le secong RecyclerView
+        val verticalRecyclerView =  view.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+        verticalRecyclerView.adapter = PlantAdapter(R.layout.item_vertical_plant)
+
         return view
     }
 }
