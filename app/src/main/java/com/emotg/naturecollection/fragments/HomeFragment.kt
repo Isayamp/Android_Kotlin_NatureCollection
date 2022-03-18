@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.emotg.naturecollection.R
 import com.emotg.naturecollection.adapter.PlantAdapter
+import com.emotg.naturecollection.adapter.PlantItemDecoration
 
 class HomeFragment : Fragment() {
 
@@ -25,6 +26,9 @@ class HomeFragment : Fragment() {
         // Récuperer le secong RecyclerView
         val verticalRecyclerView =  view.findViewById<RecyclerView>(R.id.vertical_recycler_view)
         verticalRecyclerView.adapter = PlantAdapter(R.layout.item_vertical_plant)
+
+        // Margin entre les dernières plantes
+        verticalRecyclerView.addItemDecoration(PlantItemDecoration())
 
         return view
     }
