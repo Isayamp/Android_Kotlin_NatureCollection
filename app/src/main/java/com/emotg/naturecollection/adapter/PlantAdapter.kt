@@ -5,9 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.emotg.naturecollection.PlantModel
 import com.emotg.naturecollection.R
 
-class PlantAdapter(private val layoutId: Int) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
+class PlantAdapter(
+    private val plantList: List<PlantModel>,
+    private val layoutId: Int
+    ) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
 
     /* Boîte pour ranger tout les composants à contrôler */
 
