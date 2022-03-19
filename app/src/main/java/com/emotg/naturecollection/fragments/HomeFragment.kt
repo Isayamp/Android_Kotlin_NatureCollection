@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
         plantList.add(PlantModel(
             "Tulipe",
             "C'est jolie",
-            "https://www.cfgphoto.com/data/media/2206/CFGx824.jpg",
+            "https://cdn.pixabay.com/photo/2016/07/06/20/47/prickly-pear-1501307_960_720.jpg",
             false
         ))
 
