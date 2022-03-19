@@ -28,5 +28,5 @@ class PlantAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {}
 
-    override fun getItemCount(): Int = 5
+    override fun getItemCount(): Int = plantList.size
 }
