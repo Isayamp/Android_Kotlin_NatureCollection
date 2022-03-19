@@ -26,7 +26,11 @@ class PlantAdapter(
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {}
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        // recuperer les informations de la plante
+        val currentPlant = plantList[position]
+    }
 
     override fun getItemCount(): Int = plantList.size
 }
