@@ -63,6 +63,15 @@ class HomeFragment : Fragment() {
             false
         ))
 
+        // Entegistrer la cinquième plante
+        plantList.add(PlantModel(
+            "Eucomis comosa",
+            "Rare",
+            "https://cdn.pixabay.com/photo/2021/08/19/09/46/flowers-6557619_960_720.jpg",
+            true
+        ))
+
+
 
         // Récuperer le RecyclerView
         val horizontalRecyclerView = view.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
