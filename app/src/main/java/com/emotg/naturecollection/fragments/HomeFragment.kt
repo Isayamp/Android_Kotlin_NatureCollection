@@ -6,12 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.emotg.naturecollection.MainActivity
 import com.emotg.naturecollection.PlantModel
 import com.emotg.naturecollection.R
 import com.emotg.naturecollection.adapter.PlantAdapter
 import com.emotg.naturecollection.adapter.PlantItemDecoration
 
-class HomeFragment : Fragment() {
+class HomeFragment(
+    private val context: MainActivity
+) : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
