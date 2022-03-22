@@ -78,11 +78,11 @@ class HomeFragment(
 
         // Récuperer le RecyclerView
         val horizontalRecyclerView = view.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
-        horizontalRecyclerView.adapter = PlantAdapter(plantList, context, R.layout.item_horizontal_plant)
+        horizontalRecyclerView.adapter = PlantAdapter(context, plantList, R.layout.item_horizontal_plant)
 
         // Récuperer le secong RecyclerView
         val verticalRecyclerView =  view.findViewById<RecyclerView>(R.id.vertical_recycler_view)
-        verticalRecyclerView.adapter = PlantAdapter(plantList, context, R.layout.item_vertical_plant)
+        verticalRecyclerView.adapter = PlantAdapter(context, plantList, R.layout.item_vertical_plant)
 
         // Margin entre les dernières plantes
         verticalRecyclerView.addItemDecoration(PlantItemDecoration())
