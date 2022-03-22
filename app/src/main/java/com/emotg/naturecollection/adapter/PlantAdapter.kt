@@ -1,5 +1,6 @@
 package com.emotg.naturecollection.adapter
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,7 +38,7 @@ class PlantAdapter(
         val currentPlant = plantList[position]
 
         // utiliser Glide pour récuperer l'image à partir de son lien vers le composant
-        Glide.with(context)
+        Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
     }
 
     override fun getItemCount(): Int = plantList.size
