@@ -29,6 +29,8 @@ class PlantAdapter(
         val plantName:TextView? = view.findViewById(R.id.name_item)
         // Récuperer la description de la plante
         val plantDescription:TextView? = view.findViewById(R.id.description_item)
+        // Récuperer l'état de like de la plante
+        val starIcon = view.findViewById<ImageView>(R.id.star_icon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -50,6 +52,14 @@ class PlantAdapter(
 
         // Mettre à jour la description
         holder.plantDescription?.text  = currentPlant.description
+
+        // Verifier si la plante a été likée
+        if (currentPlant.liked) {
+            holder.starIcon.setImageResource(R.drawable.ic_star)
+        }
+        else {
+            holder.starIcon.setImageResource(R.drawable.ic_unlike)
+        }
     }
 
     override fun getItemCount(): Int = plantList.size
