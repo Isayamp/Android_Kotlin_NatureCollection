@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideExtension
@@ -24,6 +25,10 @@ class PlantAdapter(
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         // Récuperer l'image de la plante
         val plantImage = view.findViewById<ImageView>(R.id.image_item)
+        // Récuperer le nom de la plante
+        val plantName = view.findViewById<TextView>(R.id.name_item)
+        // Récuperer la description de la plante
+        val plantDescription = view.findViewById<TextView>(R.id.description_item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
