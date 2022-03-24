@@ -44,6 +44,12 @@ class PlantAdapter(
 
         // utiliser Glide pour récuperer l'image à partir de son lien vers le composant
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
+
+        // Mettre à jour le nom de la plante
+        holder.plantName.text = currentPlant.neme
+
+        // Mettre à jour la description
+        holder.plantDescription.text  = currentPlant.description
     }
 
     override fun getItemCount(): Int = plantList.size
