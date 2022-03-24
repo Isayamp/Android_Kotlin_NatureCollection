@@ -26,9 +26,9 @@ class PlantAdapter(
         // Récuperer l'image de la plante
         val plantImage = view.findViewById<ImageView>(R.id.image_item)
         // Récuperer le nom de la plante
-        val plantName = view.findViewById<TextView>(R.id.name_item)
+        val plantName:TextView? = view.findViewById(R.id.name_item)
         // Récuperer la description de la plante
-        val plantDescription = view.findViewById<TextView>(R.id.description_item)
+        val plantDescription:TextView? = view.findViewById(R.id.description_item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -46,10 +46,10 @@ class PlantAdapter(
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
         // Mettre à jour le nom de la plante
-        holder.plantName.text = currentPlant.neme
+        holder.plantName?.text = currentPlant.neme
 
         // Mettre à jour la description
-        holder.plantDescription.text  = currentPlant.description
+        holder.plantDescription?.text  = currentPlant.description
     }
 
     override fun getItemCount(): Int = plantList.size
