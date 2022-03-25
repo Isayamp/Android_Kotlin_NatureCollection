@@ -26,7 +26,7 @@ class HomeFragment(
         // Créer une liste qui va stocker les plantes
         val plantList = arrayListOf<PlantModel>()
 
-        // Entegistrer la première plante
+        /*// Entegistrer la première plante
         plantList.add(PlantModel(
             "Clivia Maniata",
             "Blanc soleil",
@@ -72,7 +72,7 @@ class HomeFragment(
             "Rare",
             "https://cdn.pixabay.com/photo/2021/08/19/09/46/flowers-6557619_960_720.jpg",
             true
-        ))
+        ))*/
 
 
 
