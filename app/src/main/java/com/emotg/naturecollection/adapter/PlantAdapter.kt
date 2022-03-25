@@ -60,6 +60,14 @@ class PlantAdapter(
         else {
             holder.starIcon.setImageResource(R.drawable.ic_unlike)
         }
+
+
+        // Ajouter ou retirer un like
+        holder.starIcon.setOnClickListener {
+            // Inverser si la plante est likée ou non
+            currentPlant.liked = !currentPlant.liked
+            //
+        }
     }
 
     override fun getItemCount(): Int = plantList.size
