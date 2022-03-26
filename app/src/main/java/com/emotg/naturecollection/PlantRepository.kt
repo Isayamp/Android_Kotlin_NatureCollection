@@ -6,6 +6,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import javax.security.auth.callback.Callback
 
 class PlantRepository {
 
@@ -17,7 +18,7 @@ class PlantRepository {
         val plantList = arrayListOf<PlantModel>()
     }
 
-    fun updateData() {
+    fun updateData(callback: () -> Unit) {
         // absorber les données dépuis la databaseRef -> liste de plantes
         databaseRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -35,6 +36,9 @@ class PlantRepository {
                         plantList.add(plant)
                     }
                 }
+
+                // actionner le callback
+                callback()
             }
 
             override fun onCancelled(error: DatabaseError) {}
