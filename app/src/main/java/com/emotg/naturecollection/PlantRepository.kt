@@ -1,6 +1,7 @@
 package com.emotg.naturecollection
 
 import com.emotg.naturecollection.PlantRepository.Signleton.databaseRef
+import com.emotg.naturecollection.PlantRepository.Signleton.plantList
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -20,12 +21,20 @@ class PlantRepository {
         // absorber les données dépuis la databaseRef -> liste de plantes
         databaseRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                TODO("Not yet implemented")
+                // recolter la liste
+                for (ds in snapshot.children) {
+                    // construire un object plant
+                    val plant = ds.getValue(PlantModel::class.java)
+
+                    // vérifier si la plante n'est pas nulle
+                    if (plant != null) {
+                        // ajouter la plante à la liste
+                        plantList.add(plant)
+                    }
+                }
             }
 
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
+            override fun onCancelled(error: DatabaseError) {}
 
         })
     }
