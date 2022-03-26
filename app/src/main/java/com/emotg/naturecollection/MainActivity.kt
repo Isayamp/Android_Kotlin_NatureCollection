@@ -13,12 +13,14 @@ class MainActivity : AppCompatActivity() {
         val repo = PlantRepository()
 
         // Mettre à jour la liste de plantes
-        repo.updateData()
+        repo.updateData {
+            /* Injecter le fragment dans notre bpîte (fragment_container) */
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, HomeFragment(this))
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
 
-        /* Injecter le fragment dans notre bpîte (fragment_container) */
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, HomeFragment(this))
-        transaction.addToBackStack(null)
-        transaction.commit()
+
     }
 }
