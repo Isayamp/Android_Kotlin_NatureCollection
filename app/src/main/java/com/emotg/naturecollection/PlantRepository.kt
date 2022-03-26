@@ -21,6 +21,9 @@ class PlantRepository {
         // absorber les données dépuis la databaseRef -> liste de plantes
         databaseRef.addValueEventListener(object: ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                // retirer les anciennes plantes
+                plantList.clear()
+
                 // recolter la liste
                 for (ds in snapshot.children) {
                     // construire un object plant
