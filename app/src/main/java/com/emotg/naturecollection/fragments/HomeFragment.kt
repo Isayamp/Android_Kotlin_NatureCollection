@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.emotg.naturecollection.MainActivity
 import com.emotg.naturecollection.PlantModel
+import com.emotg.naturecollection.PlantRepository.Signleton.plantList
 import com.emotg.naturecollection.R
 import com.emotg.naturecollection.adapter.PlantAdapter
 import com.emotg.naturecollection.adapter.PlantItemDecoration
@@ -23,8 +24,8 @@ class HomeFragment(
     ): View? {
         val view = inflater?.inflate(R.layout.fragment_home, container, false)
 
-        // Créer une liste qui va stocker les plantes
-        val plantList = arrayListOf<PlantModel>()
+        /*// Créer une liste qui va stocker les plantes
+        val plantList = arrayListOf<PlantModel>()*/
 
         /*// Entegistrer la première plante
         plantList.add(PlantModel(
