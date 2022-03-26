@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
         /* Charger de notre repository */
         val repo = PlantRepository()
 
+        // Mettre à jour la liste de plantes
+        repo.updateData()
+
         /* Injecter le fragment dans notre bpîte (fragment_container) */
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, HomeFragment(this))
