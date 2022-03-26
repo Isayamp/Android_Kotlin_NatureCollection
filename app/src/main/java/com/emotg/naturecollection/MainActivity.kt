@@ -9,6 +9,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /* Charger de notre repository */
+        val repo = PlantRepository()
+
         /* Injecter le fragment dans notre bpîte (fragment_container) */
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container, HomeFragment(this))
