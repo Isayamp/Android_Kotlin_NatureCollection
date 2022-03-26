@@ -12,4 +12,8 @@ class PlantRepository {
         val plantList = arrayListOf<PlantModel>()
     }
 
+    fun updateData() {
+
+    }
+
 }
