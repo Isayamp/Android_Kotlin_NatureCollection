@@ -12,6 +12,7 @@ import com.bumptech.glide.annotation.GlideExtension
 import com.bumptech.glide.annotation.GlideModule
 import com.emotg.naturecollection.MainActivity
 import com.emotg.naturecollection.PlantModel
+import com.emotg.naturecollection.PlantRepository
 import com.emotg.naturecollection.R
 
 class PlantAdapter(
@@ -44,6 +45,9 @@ class PlantAdapter(
         // recuperer les informations de la plante
         val currentPlant = plantList[position]
 
+        // Recuperer le PlantRepository
+        val repo = PlantRepository()
+
         // utiliser Glide pour récuperer l'image à partir de son lien vers le composant
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
@@ -62,11 +66,13 @@ class PlantAdapter(
         }
 
 
-        // Ajouter ou retirer un like
+        // Ajouter ou retirer un like (favori)
         holder.starIcon.setOnClickListener {
             // Inverser si la plante est likée ou non
             currentPlant.liked = !currentPlant.liked
-            //
+
+            // Mettre à jour l'objet plante
+            repo.updatePlant(currentPlant)
         }
     }
 
