@@ -48,7 +48,7 @@ class PlantAdapter(
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
         // Mettre à jour le nom de la plante
-        holder.plantName?.text = currentPlant.neme
+        holder.plantName?.text = currentPlant.name
 
         // Mettre à jour la description
         holder.plantDescription?.text  = currentPlant.description
