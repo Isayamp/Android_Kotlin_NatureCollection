@@ -2,10 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="360dp"
     android:layout_height="500dp"
+    android:padding="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- CardView pour l'image -->
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:cardCornerRadius="8dp"
@@ -20,6 +22,19 @@
             android:src="@drawable/trending1" />
 
     </androidx.cardview.widget.CardView>
+
+    <!-- Nom de la plante -->
+    <TextView
+        android:id="@+id/popup_plant_name"
+        style="@style/TitleTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_plant_name"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
