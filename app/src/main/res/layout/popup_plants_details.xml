@@ -88,5 +88,25 @@
         app:layout_constraintTop_toBottomOf="@+id/popup_plant_grow_title"
         style="@style/DefaultTextStyle"/>
 
+    <!-- Consommation d'eau -->
+    <TextView
+        android:id="@+id/popup_plant_water_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_plant_water_title"
+        android:layout_marginTop="@dimen/default_margin"
+        style="@style/TitleTextStyle"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/popup_plant_grow_subtitle" />
+
+    <TextView
+        android:id="@+id/popup_plant_water_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_plant_water_subtitle"
+        style="@style/DefaultTextStyle"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/popup_plant_water_title" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
