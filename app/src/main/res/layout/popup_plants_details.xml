@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="360dp"
     android:layout_height="500dp"
     android:padding="15dp"
@@ -45,5 +46,26 @@
         app:layout_constraintBottom_toBottomOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView2" />
+
+    <!-- Plant descriotion -->
+    <TextView
+        android:id="@+id/popup_plant_description_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_plant_description_title"
+        style="@style/TitleTextStyle"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <!-- description -->
+    <TextView
+        android:id="@+id/popup_plant_description_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popup_plant_description_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/popup_plant_description_title"
+        style="@style/DefaultTextStyle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
